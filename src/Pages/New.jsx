@@ -1,5 +1,10 @@
+import WorkoutNewForm from "../Components/WorkoutNewForm"
+
 export default function New() {
     return (
-        <div>New</div>
+        <div>
+            New
+            <WorkoutNewForm />
+        </div>
     )
 }
