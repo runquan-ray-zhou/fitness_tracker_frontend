@@ -1,5 +1,10 @@
+import Workouts from "../Components/Workouts"
+
 export default function Index() {
     return (
-        <div>Index</div>
+        <div>
+            Index
+            <Workouts />
+        </div>
     )
 }
