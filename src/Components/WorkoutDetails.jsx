@@ -30,6 +30,16 @@ export default function WorkoutDetails() {
         })
     }, [id, navigate])
 
+    function handleDelete() {
+        fetch(`${API}/workouts/${id}`, {
+            method: "DELETE"
+        })
+        .then(() =>{
+            navigate("/workouts")
+        })
+        .catch((error) => console.error(error))
+    }
+
     return (
         <div>
             <h1>Workout Details</h1>
@@ -38,7 +48,7 @@ export default function WorkoutDetails() {
             <Link to={`/workouts/${id}/edit`}>
             <button>Edit</button>
             </Link>
-            <button>Delete</button>
+            <button onClick={ handleDelete }>Delete</button>
         </div>
     )
 }
